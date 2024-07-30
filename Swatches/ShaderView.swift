@@ -18,6 +18,8 @@ import SwiftUI
 struct ShaderView: View {
     let mixedColor: Color
     @State private var totalIterations = 3.0
+    @State private var colorStrings = ""
+    @State private var selectedIndex: Int?
     var body: some View {
         VStack {
             Slider(
@@ -36,10 +38,30 @@ struct ShaderView: View {
         .imageScale(.large)
         HStack {
             ForEach(0..<Int(totalIterations), id: \.self) { index in
-                mixedColor
+                ColorView(
+                    mixedColor: mixedColor,
+                    index: index,
+                    totalIterations: Int(
+                        totalIterations
+                    ),
+                    colorStrings: $colorStrings,
+                    selectedIndex: $selectedIndex
+                )
+                .border(selectedIndex == index ? .gray : .clear, width: 4)
             }
         }
         .frame(height: 100)
+        Text(colorStrings)
+            .font(.title)
+            .multilineTextAlignment(.center)
+            .onChange(of: totalIterations) {
+                selectedIndex = nil
+                colorStrings = ""
+            }
+            .onChange(of: mixedColor) {
+                selectedIndex = nil
+                colorStrings = ""
+            }
     }
 }
 
