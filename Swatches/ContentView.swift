@@ -16,14 +16,64 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State private var color1 = Color.red
+    @State private var color2 = Color.blue
+    @State private var fraction = 0.5
+    var mixedColor: Color {
+        color1.mix(with: color2, by: fraction)
+    }
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        NavigationStack {
+            VStack {
+                Slider(value: $fraction) {
+                    Text("Fraction")
+                } minimumValueLabel: {
+                    Text("0")
+                } maximumValueLabel: {
+                    Text("1")
+                }
+
+                HStack(alignment: .bottom) {
+                    VStack {
+                        ColorPicker("Color 1", selection: $color1)
+                            .labelsHidden()
+                        color1
+                            .frame(width: 100, height: 100)
+                            .clipShape(.rect(cornerRadius: 10))
+                            .overlay {
+                                Text((1-fraction), format: .number.precision(.fractionLength(0...2)))
+                            }
+                        Text(color1.colorStrings)
+                            .font(.system(size: 10))
+                            .multilineTextAlignment(.center)
+                    }
+                    VStack {
+                        mixedColor
+                            .frame(width: 100, height: 100)
+                            .clipShape(.rect(cornerRadius: 10))
+                        Text(mixedColor.colorStrings)
+                            .font(.system(size: 10))
+                            .multilineTextAlignment(.center)
+                    }
+                    VStack {
+                        ColorPicker("Color 2", selection: $color2)
+                            .labelsHidden()
+                        color2
+                            .frame(width: 100, height: 100)
+                            .clipShape(.rect(cornerRadius: 10))
+                            .overlay {
+                                Text(fraction, format: .number.precision(.fractionLength(0...2)))
+                            }
+                        Text(color2.colorStrings)
+                            .font(.system(size: 10))
+                            .multilineTextAlignment(.center)
+                    }
+                }
+                Spacer()
+            }
+            .padding()
+            .navigationTitle("Color Mixer")
         }
-        .padding()
     }
 }
 
