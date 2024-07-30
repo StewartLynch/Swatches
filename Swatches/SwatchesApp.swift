@@ -19,7 +19,7 @@ import SwiftUI
 struct SwatchesApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ColorMixerView()
         }
     }
 }

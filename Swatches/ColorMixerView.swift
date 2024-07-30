@@ -15,7 +15,7 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct ColorMixerView: View {
     @State private var color1 = Color.red
     @State private var color2 = Color.blue
     @State private var fraction = 0.5
@@ -69,6 +69,7 @@ struct ContentView: View {
                             .multilineTextAlignment(.center)
                     }
                 }
+                ShaderView(mixedColor: mixedColor)
                 Spacer()
             }
             .padding()
@@ -78,5 +79,5 @@ struct ContentView: View {
 }
 
 #Preview {
-    ContentView()
+    ColorMixerView()
 }

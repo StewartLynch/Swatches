@@ -7,8 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BB2742A32C593CBF0064B6BA /* ShaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB2742A22C593CBF0064B6BA /* ShaderView.swift */; };
 		BBFBAEA42C5831FD00E3E923 /* Color+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBFBAE9F2C5831FD00E3E923 /* Color+Extension.swift */; };
-		BBFBAEA52C5831FD00E3E923 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBFBAEA02C5831FD00E3E923 /* ContentView.swift */; };
+		BBFBAEA52C5831FD00E3E923 /* ColorMixerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBFBAEA02C5831FD00E3E923 /* ColorMixerView.swift */; };
 		BBFBAEA62C5831FD00E3E923 /* PlaformColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBFBAEA12C5831FD00E3E923 /* PlaformColor+Extension.swift */; };
 		BBFBAEA72C5831FD00E3E923 /* SwatchesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBFBAEA22C5831FD00E3E923 /* SwatchesApp.swift */; };
 		BBFBAEA82C5831FD00E3E923 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BBFBAE9C2C5831FD00E3E923 /* Preview Assets.xcassets */; };
@@ -17,11 +18,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BB2742A22C593CBF0064B6BA /* ShaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShaderView.swift; sourceTree = "<group>"; };
 		BBFBAE872C58318D00E3E923 /* Swatches.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Swatches.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BBFBAE9C2C5831FD00E3E923 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		BBFBAE9E2C5831FD00E3E923 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BBFBAE9F2C5831FD00E3E923 /* Color+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extension.swift"; sourceTree = "<group>"; };
-		BBFBAEA02C5831FD00E3E923 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		BBFBAEA02C5831FD00E3E923 /* ColorMixerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorMixerView.swift; sourceTree = "<group>"; };
 		BBFBAEA12C5831FD00E3E923 /* PlaformColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PlaformColor+Extension.swift"; sourceTree = "<group>"; };
 		BBFBAEA22C5831FD00E3E923 /* SwatchesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwatchesApp.swift; sourceTree = "<group>"; };
 		BBFBAEAB2C58331C00E3E923 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
@@ -66,7 +68,8 @@
 			isa = PBXGroup;
 			children = (
 				BBFBAEA22C5831FD00E3E923 /* SwatchesApp.swift */,
-				BBFBAEA02C5831FD00E3E923 /* ContentView.swift */,
+				BBFBAEA02C5831FD00E3E923 /* ColorMixerView.swift */,
+				BB2742A22C593CBF0064B6BA /* ShaderView.swift */,
 				BBFBAEAA2C58320F00E3E923 /* Extensions */,
 				BBFBAE9D2C5831FD00E3E923 /* Preview Content */,
 				BBFBAE9E2C5831FD00E3E923 /* Assets.xcassets */,
@@ -158,8 +161,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				BBFBAEA42C5831FD00E3E923 /* Color+Extension.swift in Sources */,
-				BBFBAEA52C5831FD00E3E923 /* ContentView.swift in Sources */,
+				BBFBAEA52C5831FD00E3E923 /* ColorMixerView.swift in Sources */,
 				BBFBAEA62C5831FD00E3E923 /* PlaformColor+Extension.swift in Sources */,
+				BB2742A32C593CBF0064B6BA /* ShaderView.swift in Sources */,
 				BBFBAEA72C5831FD00E3E923 /* SwatchesApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
