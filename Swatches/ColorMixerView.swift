@@ -35,7 +35,7 @@ struct ColorMixerView: View {
 
                 HStack(alignment: .bottom) {
                     VStack {
-                        ColorPicker("Color 1", selection: $color1)
+                        ColorPicker("Color 1", selection: $color1, supportsOpacity: false)
                             .labelsHidden()
                         color1
                             .frame(width: 100, height: 100)
@@ -56,7 +56,7 @@ struct ColorMixerView: View {
                             .multilineTextAlignment(.center)
                     }
                     VStack {
-                        ColorPicker("Color 2", selection: $color2)
+                        ColorPicker("Color 2", selection: $color2, supportsOpacity: false)
                             .labelsHidden()
                         color2
                             .frame(width: 100, height: 100)
